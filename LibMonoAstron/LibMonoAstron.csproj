@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDF4306D-6F88-42B2-8D8B-F8B41207A7A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibMonoAstron</RootNamespace>
+    <AssemblyName>LibMonoAstron</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Util\HashGenerator.cs" />
+    <Compile Include="DClass\DC\ArrayType.cs" />
+    <Compile Include="DClass\DC\Class.cs" />
+    <Compile Include="DClass\DC\DistributedType.cs" />
+    <Compile Include="DClass\DC\Field.cs" />
+    <Compile Include="DClass\DC\KeywordList.cs" />
+    <Compile Include="DClass\DC\Method.cs" />
+    <Compile Include="DClass\DC\MolecularField.cs" />
+    <Compile Include="DClass\DC\NumericRange.cs" />
+    <Compile Include="DClass\DC\NumericType.cs" />
+    <Compile Include="DClass\DC\Parameter.cs" />
+    <Compile Include="DClass\DC\Struct.cs" />
+    <Compile Include="DClass\Value\Default.cs" />
+    <Compile Include="DClass\File\Parser.cs" />
+    <Compile Include="DClass\File\File.cs" />
+    <Compile Include="DClass\File\Old_Parser.cs" />
+    <Compile Include="Net\Common\Datagram.cs" />
+    <Compile Include="Net\Client\AstronClientRepository.cs" />
+    <Compile Include="Net\Common\Connection.cs" />
+    <Compile Include="Net\Common\MessageType.cs" />
+    <Compile Include="DClass\File\Legacy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="DClass\" />
+    <Folder Include="Util\" />
+    <Folder Include="DClass\DC\" />
+    <Folder Include="DClass\Value\" />
+    <Folder Include="DClass\File\" />
+    <Folder Include="Net\" />
+    <Folder Include="Net\Common\" />
+    <Folder Include="Net\Client\" />
+    <Folder Include="Net\Internal\" />
+  </ItemGroup>
+</Project>

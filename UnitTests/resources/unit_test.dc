@@ -1,0 +1,10 @@
+/* 
+Unit Test DC File for LibMonoAstron
+If you change things in here, remember to change the expected hashes in the unit test
+*/
+
+// Test structs
+struct testStruct {
+	int/10 x;
+	int/10 y;
+}
